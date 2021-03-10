@@ -7,9 +7,11 @@ import Navbar from "./components/Navbar";
 
 import "./styles.scss";
 
+import useDM from "./hooks/useDM"
+
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDM(false);
 
   useEffect(() => {
     axios
